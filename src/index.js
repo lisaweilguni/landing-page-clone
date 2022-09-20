@@ -2,7 +2,6 @@ import { css, Global } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import baskerville from './fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

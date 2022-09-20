@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import baskerville from './fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf';
 import editing from './images/advanced-editing_graphic.png';
 import star from './images/astrerisck.svg';
 import blob from './images/blob.svg';
@@ -85,20 +84,27 @@ const introSectionStyles = css`
   padding-top: 200px;
   padding-bottom: 0;
   z-index: 2;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+`;
 
-  img {
-    position: absolute;
-    z-index: -1;
-    display: block;
-    width: 110em;
-    left: auto;
-    top: -60%;
-    right: -20%;
-    bottom: auto;
-    max-width: none;
-    overflow: hidden;
-  }
+const specialImageStyles = css`
+  position: absolute;
+  z-index: -1;
+  width: 110em;
+  left: auto;
+  top: -60%;
+  right: -20%;
+  bottom: auto;
+  max-width: none;
+  overflow: hidden;
+`;
+const introImgStyles = css`
+  width: 25%;
+  margin-left: 230px;
+  margin-bottom: 50px;
 `;
 
 const titleSectionStyles = css`
@@ -144,7 +150,7 @@ const h2Styles = css`
 const orgaSectionStyles = css`
   position: relative;
   padding-top: 5.42em;
-  padding-bottom: 5.14em;
+  padding-bottom: 4.3em;
   background-color: #f6f9fc;
   display: block;
 `;
@@ -178,6 +184,18 @@ const carouselWrapperStyles = css`
     border: 0;
     vertical-align: middle;
     display: inline-block;
+    animation: animate 25s backwards infinite;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-1100px));
+    }
   }
 `;
 
@@ -187,7 +205,7 @@ const bigLogoStyles = css`
 
 const summaryBuilderSectionStyles = css`
   display: block;
-  padding-top: 100px;
+  padding-top: 140px;
   padding-bottom: 100px;
   background-color: white;
   text-align: center;
@@ -320,27 +338,28 @@ function App() {
       </header>
 
       <section css={introSectionStyles}>
-        <div>
-          <div css={titleSectionStyles}>
-            <h1 css={h1Styles}>
-              Get the gist. Learn
-              <br />
-              10x faster with
-              <br />
-              <Logo />
-            </h1>
-            <h2 css={h2Styles}>
-              <strong>Capture</strong> key ideas with Upword's AI.
-              <br />
-              <strong>Personalize </strong>
-              your summaries.
-              <br />
-              <strong>Grow and manage</strong> your knowledge.
-            </h2>
-            <a href="abc">Start Free Trial</a>
-          </div>
+        <div css={titleSectionStyles}>
+          <h1 css={h1Styles}>
+            Get the gist. Learn
+            <br />
+            10x faster with
+            <br />
+            <Logo />
+          </h1>
+          <h2 css={h2Styles}>
+            <strong>Capture</strong> key ideas with Upword's AI.
+            <br />
+            <strong>Personalize </strong>
+            your summaries.
+            <br />
+            <strong>Grow and manage</strong> your knowledge.
+          </h2>
+          <a href="abc">Start Free Trial</a>
+        </div>
+        <div css={specialImageStyles}>
           <img src={blob} alt="" />
         </div>
+        <img src={summarize} alt="Summarize" css={introImgStyles} />
       </section>
 
       <main>
