@@ -96,21 +96,22 @@ const specialImageStyles = css`
   width: 110em;
   left: auto;
   top: -60%;
-  right: -20%;
+  right: -50%;
   bottom: auto;
   max-width: none;
   overflow: hidden;
 `;
 const introImgStyles = css`
-  width: 25%;
-  margin-left: 230px;
-  margin-bottom: 50px;
+  width: 30%;
+  margin-left: 50px;
+  margin-bottom: 80px;
+  margin-right: 120px;
 `;
 
 const titleSectionStyles = css`
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 100px 300px;
+  padding: 20px 50px 100px 170px;
   gap: 20px;
 
   a {
@@ -150,7 +151,7 @@ const h2Styles = css`
 const orgaSectionStyles = css`
   position: relative;
   padding-top: 5.42em;
-  padding-bottom: 4.3em;
+  padding-bottom: 2em;
   background-color: #f6f9fc;
   display: block;
 `;
@@ -171,14 +172,17 @@ const orgaSectionHeadingStyles = css`
 `;
 
 const carouselWrapperStyles = css`
+  display: flex;
+  flex-direction: row;
   margin-bottom: 4.86em;
   margin-top: 4.86em;
   color: #b1b4b7;
   text-align: center;
   text-transform: uppercase;
+  overflow: hidden;
 
   img {
-    width: 9em;
+    width: 6em;
     margin-right: 3.33em;
     flex: 0 0 auto;
     border: 0;
