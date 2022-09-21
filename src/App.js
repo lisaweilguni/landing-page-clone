@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import LibreBaskerville from './fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf';
 import editing from './images/advanced-editing_graphic.png';
 import star from './images/astrerisck.svg';
 import blob from './images/blob.svg';
@@ -134,8 +135,12 @@ const titleSectionStyles = css`
 
 const h1Styles = css`
   display: inline;
-  font-family: 'Libre Baskerville', sans-serif;
-  font-size: 4.17em;
+  @font-face {
+    font-family: 'LibreBaskerville';
+    src: url(${LibreBaskerville}) format('opentype');
+  }
+  font-family: 'LibreBaskerville';
+  font-size: 3.8em;
   line-height: 1.19;
   font-weight: 700;
   margin: 0;
@@ -151,7 +156,7 @@ const h2Styles = css`
 const orgaSectionStyles = css`
   position: relative;
   padding-top: 5.42em;
-  padding-bottom: 2em;
+  padding-bottom: 1.5em;
   background-color: #f6f9fc;
   display: block;
 `;
@@ -172,8 +177,6 @@ const orgaSectionHeadingStyles = css`
 `;
 
 const carouselWrapperStyles = css`
-  display: flex;
-  flex-direction: row;
   margin-bottom: 4.86em;
   margin-top: 4.86em;
   color: #b1b4b7;
@@ -225,7 +228,7 @@ const readingTimeSectionStyles = css`
   background-color: white;
   text-align: center;
   align-items: center;
-  column-gap: 100px;
+  column-gap: 90px;
   margin: auto 20% auto 20%;
 `;
 
@@ -250,22 +253,26 @@ const purpleTextStyles = css`
 `;
 
 const explanationHeadingStyles = css`
-  font-family: ivypresto-display, sans-serif;
-  font-size: 3em;
+  @font-face {
+    font-family: 'LibreBaskerville';
+    src: url(${LibreBaskerville}) format('opentype');
+  }
+  font-family: 'LibreBaskerville';
+  font-size: 2.5em;
   line-height: 1.15;
   font-weight: 700;
   color: #202020;
 `;
 
 const explanationSubHeadingStyles = css`
-  font-size: 1.3em;
-  line-height: 1.7;
+  font-size: 1.2em;
+  line-height: 1.6;
   font-weight: 400;
   color: #56647a;
 `;
 
 const explanationSubHeadingBulletStyles = css`
-  font-size: 1.3em;
+  font-size: 1.2em;
   line-height: 2.2;
   font-weight: 400;
   color: #56647a;
@@ -279,7 +286,7 @@ const bottomSectionStyles = css`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 130px;
+  gap: 190px;
 
   a {
     padding: 14px 30px;
@@ -302,12 +309,16 @@ const bottomSectionStyles = css`
 `;
 
 const bottomSectionHeadingStyles = css`
-  font-family: ivypresto-display, sans-serif;
+  @font-face {
+    font-family: 'LibreBaskerville';
+    src: url(${LibreBaskerville}) format('opentype');
+  }
+  font-family: 'LibreBaskerville';
   font-size: 3em;
   line-height: 1.15;
   font-weight: 700;
   color: white;
-  max-width: 20%;
+  max-width: 30%;
 `;
 
 const bottomSectionContentStyles = css`
@@ -401,8 +412,9 @@ function App() {
           <div css={readingTimeSectionTextStyles}>
             <div css={purpleTextStyles}>AI, TAKE THE WHEEL</div>
             <div css={explanationHeadingStyles}>
-              Cut your reading time
-              <br /> by up to 85%
+              Cut your reading
+              <br />
+              time by up to 85%
             </div>
             <div css={explanationSubHeadingStyles}>
               Our AI scans the text for you and captures only <br /> what's
@@ -440,7 +452,7 @@ function App() {
               <br />
               <div css={explanationSubHeadingBulletStyles}>
                 And just like that - <strong>personalize</strong> your learning
-                experience
+                experience.
               </div>
             </div>
           </div>
@@ -454,9 +466,9 @@ function App() {
               <br /> personalized summary
             </div>
             <div css={explanationSubHeadingStyles}>
-              Transform your notes into an audio clip with just a<br /> click.
-              Create playlists to manage your knowledge.
-              <br /> Play it back and learn the way that works for you
+              Transform your notes into an audio clip with just a click. Create
+              playlists to manage your knowledge. Play it back and learn the way
+              that works for you
             </div>
           </div>
           <div css={readingTimeSectionImageStyles}>

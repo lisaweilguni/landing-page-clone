@@ -14,12 +14,12 @@ root.render(
           box-sizing: border-box;
         }
         body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
           background-color: white;
           color: #202020;
           margin: 0;
           line-height: 20px;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
           font-size: 14px;
         }
